@@ -68,12 +68,30 @@ To integrate and deploy this application via Jenkins:
 - CI/CD automation in a real-world scenario.
 
 ---
+## 🗂️ Project Structure
+/YourProjectName
+│
+├── src/main/java/com/nt/servlet/DateServlet.java
+├── webapp/index.jsp
+├── WEB-INF/web.xml # (if using XML-based configuration)
+├── pom.xml / build.gradle # (build tool)
 
-## 📎 License
 
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+## ⚙️ How It Works
 
----
+1. User accesses the home page (`index.jsp`).
+2. The homepage contains a link labeled **"Show Date and Time"**.
+3. Clicking the link sends a GET request to `/dateurl`.
+4. `DateServlet` processes the request and responds with the **current system date and time**.
+
+
+## 📚 Learning Outcomes
+
+- Java Web Development with Servlets and JSP.
+- Application packaging and deployment using Maven or Gradle.
+- Setting up and configuring Jenkins pipelines.
+- CI/CD automation in a real-world scenario.
+
 
 ## 🙋‍♂️ Contributions
 
