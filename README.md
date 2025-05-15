@@ -1,73 +1,89 @@
-Jenkins Web Application - Date and Time Display
-This is a simple Java-based web application built using Servlets and JSP, deployed on 
-a Tomcat server. The project demonstrates how to display the current date and time using Servlets 
-and integrates with Jenkins CI/CD pipeline for automated build and deployment.
+# 🧩 Jenkins Web Application – Date and Time Display
 
-1> Description
-This project is a basic Java web application that includes:
+This is a simple Java-based web application built using **Servlets** and **JSP**, deployed on an **Apache Tomcat server**.  
+The project demonstrates how to display the current date and time using Servlets and integrates with a **Jenkins CI/CD pipeline** for automated build and deployment.
 
-A homepage (index.jsp) with a link.
+---
 
-A Servlet (DateServlet.java) mapped to /dateurl that displays the current system date and time.
+## 🚀 Features
 
-Integration with Jenkins for automatic deployment and build.
+- A homepage (`index.jsp`) with a navigation link.
+- A Servlet (`DateServlet.java`) mapped to `/dateurl` that displays the current system date and time.
+- Integration with Jenkins for:
+  - Automated build using Maven or Gradle.
+  - Deployment to Apache Tomcat.
+- Educational value:
+  - Demonstrates use of Java Servlets and JSP.
+  - Shows basic CI/CD configuration with Jenkins.
 
-The project serves as a hands-on learning demo for:
+---
 
-Java Servlets and JSP
+## 🛠️ Technologies Used
 
-Deployment using Apache Tomcat
+- Java (Servlet API)
+- Jakarta Servlet (`jakarta.servlet.http`)
+- JSP (JavaServer Pages)
+- Apache Tomcat (v9 or v10)
+- Jenkins (for CI/CD)
+- Maven or Gradle (build tool)
+- Git & GitHub
 
-Jenkins pipeline configuration for CI/CD
 
-2.Technologies Used
-Java (Servlet API)
+---
 
-Jakarta Servlet (jakarta.servlet.http)
+## ⚙️ How It Works
 
-Apache Tomcat (v9 or v10)
+1. User accesses the home page (`index.jsp`).
+2. The homepage contains a link labeled **"Show Date and Time"**.
+3. Clicking the link sends a GET request to `/dateurl`.
+4. `DateServlet` processes the request and responds with the **current system date and time**.
 
-JSP (JavaServer Pages)
+---
 
-Jenkins (for CI/CD)
+## 🧪 Deployment Using Jenkins (CI/CD)
 
-Maven or Gradle (build tool, if used)
+To integrate and deploy this application via Jenkins:
 
-Git & GitHub
+1. **Push your project to GitHub.**
+2. **In Jenkins:**
+   - Create a new Freestyle or Pipeline job.
+   - Connect it to your GitHub repository.
+   - Use Maven or Gradle to build the project.
+   - Generate the `.war` file.
+   - Deploy the `.war` to the Apache Tomcat server:
+     - Using **Deploy to Container plugin**, or
+     - With custom **shell scripts**.
+3. **Configure CI/CD triggers:**
+   - Use **Poll SCM** or **GitHub Webhooks** to auto-trigger builds on code updates.
 
-3. Project Structure
-pgsql
-Copy
-Edit
-/YourProjectName
-│
-├── src/main/java/com/nt/servlet/DateServlet.java
-├── webapp/index.jsp
-├── WEB-INF/web.xml (if using XML configuration)
-│
-└── pom.xml / build.gradle (if using Maven/Gradle)
-⚙️ How It Works
-User accesses the home page (index.jsp).
+> On every successful build, Jenkins will automatically deploy the latest `.war` to the Tomcat server.
 
-User clicks on the link "Show Date And Time".
+---
 
-The link triggers a GET request to /dateurl.
+## 📚 Learning Outcomes
 
-DateServlet processes the request and responds with the current date and time.
+- Java Web Development with Servlets and JSP.
+- Application packaging and deployment using Maven or Gradle.
+- Setting up and configuring Jenkins pipelines.
+- CI/CD automation in a real-world scenario.
 
-3. Deployment Using Jenkins
-This application can be integrated into a Jenkins pipeline using the following steps:
+---
 
-Create a GitHub repository and push your project.
+## 📎 License
 
-Configure Jenkins job:
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
-Connect to your GitHub repo.
+---
 
-Use Maven/Gradle to build.
+## 🙋‍♂️ Contributions
 
-Deploy the .war file to Tomcat (using plugins or shell scripts).
+Feel free to fork the repository and submit pull requests. Issues and improvements are welcome!
 
-Configure Poll SCM or Webhook for auto-triggering builds on every code change.
 
-On successful build, Jenkins deploys the latest version to the Tomcat server.
+
+
+
+
+
+
+
